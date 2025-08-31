@@ -1,0 +1,16 @@
+import random
+print('MAGIC 8-BALL')
+
+answer = ['yes' , 'no' , 'maybe']
+print('will i pass the exam?')
+user = input('Guess the computer answer (yes , no or maybe): ').lower()
+computer = random.choice(answer)
+
+if user == computer :
+	print('you win!')
+elif user != computer and user in answer:
+	print('you lost!')
+else:
+	print('invalid choice!')
+	quit()
+print('the computer chose', computer)
